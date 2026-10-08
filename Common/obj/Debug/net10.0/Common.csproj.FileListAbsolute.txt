@@ -1,0 +1,11 @@
+D:\API\Common\bin\Debug\net10.0\Common.deps.json
+D:\API\Common\bin\Debug\net10.0\Common.dll
+D:\API\Common\bin\Debug\net10.0\Common.pdb
+D:\API\Common\obj\Debug\net10.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\API\Common\obj\Debug\net10.0\Common.AssemblyInfoInputs.cache
+D:\API\Common\obj\Debug\net10.0\Common.AssemblyInfo.cs
+D:\API\Common\obj\Debug\net10.0\Common.csproj.CoreCompileInputs.cache
+D:\API\Common\obj\Debug\net10.0\Common.dll
+D:\API\Common\obj\Debug\net10.0\refint\Common.dll
+D:\API\Common\obj\Debug\net10.0\Common.pdb
+D:\API\Common\obj\Debug\net10.0\ref\Common.dll
