@@ -1,13 +1,13 @@
-namespace APP.Common;
+namespace Common.DB.IdbUnits;
 
 public interface IClient
 {
-  int Client_id { get; set; }
-  string Full_name { get; set; }
-  int Passport_siries { get; set; }
-  int Passport_number { get; set; }
-  DateTime Date_born { get; set; }
-  string Phone_number { get; set; }
-  string Adres { get; set; }
-  string Email { get; set; }
+    int ClientId { get; set; }
+    string FullName { get; set; }
+    string PassportSeries { get; set; }
+    string PassportNumber { get; set; }
+    DateOnly BirthDate { get; set; }
+    string PhoneNumber { get; set; }
+    string Address { get; set; }
+    string? Email { get; set; }
 }
