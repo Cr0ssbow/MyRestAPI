@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Drivers\\MariaDB\\MariaDB.csproj": {}
+    "D:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\Common.csproj": {
+    "D:\\MyRestAPI\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\MyRestAPI\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\obj\\",
+        "projectPath": "D:\\MyRestAPI\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Evgeny\\.nuget\\packages\\",
+        "outputPath": "D:\\MyRestAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\VSC components\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jenaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Evgeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -346,20 +346,20 @@
         }
       }
     },
-    "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Drivers\\MariaDB\\MariaDB.csproj": {
+    "D:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Drivers\\MariaDB\\MariaDB.csproj",
+        "projectUniqueName": "D:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
         "projectName": "MariaDB",
-        "projectPath": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Drivers\\MariaDB\\MariaDB.csproj",
-        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Drivers\\MariaDB\\obj\\",
+        "projectPath": "D:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
+        "packagesPath": "C:\\Users\\Evgeny\\.nuget\\packages\\",
+        "outputPath": "D:\\MyRestAPI\\Drivers\\MariaDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "E:\\VSC components\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jenaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Evgeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -376,8 +376,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\Common.csproj"
+              "D:\\MyRestAPI\\Common\\Common.csproj": {
+                "projectPath": "D:\\MyRestAPI\\Common\\Common.csproj"
               }
             }
           }

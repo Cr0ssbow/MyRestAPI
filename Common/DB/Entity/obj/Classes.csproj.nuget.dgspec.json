@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyRestAPI\\Common\\Common.csproj": {}
+    "d:\\MyRestAPI\\Common\\DB\\Entity\\Classes.csproj": {}
   },
   "projects": {
-    "D:\\MyRestAPI\\Common\\Common.csproj": {
+    "d:\\MyRestAPI\\Common\\DB\\Entity\\Classes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyRestAPI\\Common\\Common.csproj",
-        "projectName": "Common",
-        "projectPath": "D:\\MyRestAPI\\Common\\Common.csproj",
+        "projectUniqueName": "d:\\MyRestAPI\\Common\\DB\\Entity\\Classes.csproj",
+        "projectName": "Classes",
+        "projectPath": "d:\\MyRestAPI\\Common\\DB\\Entity\\Classes.csproj",
         "packagesPath": "C:\\Users\\Evgeny\\.nuget\\packages\\",
-        "outputPath": "D:\\MyRestAPI\\Common\\obj\\",
+        "outputPath": "d:\\MyRestAPI\\Common\\DB\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

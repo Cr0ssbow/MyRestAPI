@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jenaj\\.nuget\\packages\\": {},
-    "E:\\VSC components\\NuGetPackages": {}
+    "C:\\Users\\Evgeny\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\Common.csproj",
+      "projectUniqueName": "D:\\MyRestAPI\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\Common.csproj",
-      "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jenaj\\OneDrive\\Рабочий стол\\API\\Common\\obj\\",
+      "projectPath": "D:\\MyRestAPI\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\Evgeny\\.nuget\\packages\\",
+      "outputPath": "D:\\MyRestAPI\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\VSC components\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jenaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Evgeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
