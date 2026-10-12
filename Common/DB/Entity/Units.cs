@@ -5,7 +5,8 @@ namespace MyAPP.Common.DB.Entity;
 public class Units
 {
     private string unitName = string.Empty;
-    private const string unitNamePattern = "^[А-Яа-я ]{3,50}$"; 
+    private const string unitNamePattern = "^[А-Яа-я ]{3,50}$";
+     
     private string unitShortName = string.Empty;
     private const string unitShortNamePattern = "^[А-Яа-я]{1,4}[.]$"; 
     public int UnitsID { get; set; }
