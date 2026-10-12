@@ -10,7 +10,7 @@
         "projectUniqueName": "E:\\MyRestAPI\\Common\\Common.csproj",
         "projectName": "Common",
         "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj",
-        "packagesPath": "e:\\MyRestAPI\\Common\\obj\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
         "outputPath": "E:\\MyRestAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [

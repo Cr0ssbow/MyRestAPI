@@ -10,12 +10,9 @@ public interface IClient
     void Put(int id, Client item);
     void Delete(int id);
 
-    // Поиск клиента по паспортным данным (серия и номер паспорта)
-    Client? GetByPassport(string series, string number);
+    Client? GetByPassport(string series, string number); // Поиск клиента по паспортным данным
 
-    // Быстрый поиск клиента по контактному номеру телефона
-    Client? GetByPhone(string phoneNumber);
+    Client? GetByPhone(string phoneNumber); // Поиск клиента по номеру телефона
 
-    // Нечёткий поиск клиентов по совпадению части ФИО
-    List<Client> SearchByName(string namePart);
+    List<Client> SearchByName(string namePart); // Нечёткий поиск клиентов по совпадению части ФИО
 }

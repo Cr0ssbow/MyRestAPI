@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MyRestAPI\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj": {}
+    "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj": {}
   },
   "projects": {
-    "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj": {
+    "E:\\MyRestAPI\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj",
+        "projectUniqueName": "E:\\MyRestAPI\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj",
+        "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-        "outputPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\obj\\",
+        "outputPath": "E:\\MyRestAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\VSC components\\NuGetPackages"
@@ -346,14 +346,14 @@
         }
       }
     },
-    "E:\\MyRestAPI\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj": {
+    "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyRestAPI\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
+        "projectUniqueName": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
         "projectName": "MariaDB",
-        "projectPath": "E:\\MyRestAPI\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
+        "projectPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
         "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-        "outputPath": "E:\\MyRestAPI\\MyRestAPI\\Drivers\\MariaDB\\obj\\",
+        "outputPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\VSC components\\NuGetPackages"
@@ -376,8 +376,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj": {
-                "projectPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj"
+              "E:\\MyRestAPI\\Common\\Common.csproj": {
+                "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj"
               }
             }
           }

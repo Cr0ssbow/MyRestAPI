@@ -4,7 +4,6 @@ namespace MyAPP.Common.DB.IdbUnits;
 
 public interface IType_of_insurance
 {
-    // Базовые CRUD-операции
     List<Type_of_insurance> Get();
     Type_of_insurance? Get(int id);
     void Post(Type_of_insurance item);

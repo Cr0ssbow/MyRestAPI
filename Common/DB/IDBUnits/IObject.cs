@@ -12,9 +12,7 @@ public interface IObject
     void Put(int id, Object item);
     void Delete(int id);
 
-    // Поиск объекта по уникальному идентификатору (VIN, госномер, кадастровый номер)
-    Object? GetByIdentifier(string identifier);
+    Object? GetByIdentifier(string identifier); // Поиск объекта по идентификатору VIN, госномер, кадастровый номер
 
-    // Фильтрация объектов страхования по категории (типу объекта)
-    List<Object> GetByTypeId(int typeOfObjectId);
+    List<Object> GetByTypeId(int typeOfObjectId); // Фильтрация объектов страхования по типу объекта
 }

@@ -11,9 +11,7 @@ public interface IManager
     void Put(int id, Manager item);
     void Delete(int id);
 
-    // Поиск сотрудника по корпоративной электронной почте
-    Manager? GetByEmail(string email);
+    Manager? GetByEmail(string email); // Поиск сотрудника по мылу
 
-    // Выборка сотрудников по занимаемой должности
-    List<Manager> GetByPost(string post);
+    List<Manager> GetByPost(string post); // Выборка сотрудников по должности
 }

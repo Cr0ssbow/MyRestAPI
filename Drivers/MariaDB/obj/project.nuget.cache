@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ChEm/+cHd/c=",
+  "dgSpecHash": "cMnEyrlDXAM=",
   "success": true,
-  "projectFilePath": "E:\\MyRestAPI\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
+  "projectFilePath": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

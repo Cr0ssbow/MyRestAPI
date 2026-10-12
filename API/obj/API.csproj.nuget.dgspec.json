@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MyRestAPI\\MyRestAPI\\API\\API.csproj": {}
+    "E:\\MyRestAPI\\API\\API.csproj": {}
   },
   "projects": {
-    "E:\\MyRestAPI\\MyRestAPI\\API\\API.csproj": {
+    "E:\\MyRestAPI\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyRestAPI\\MyRestAPI\\API\\API.csproj",
+        "projectUniqueName": "E:\\MyRestAPI\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "E:\\MyRestAPI\\MyRestAPI\\API\\API.csproj",
+        "projectPath": "E:\\MyRestAPI\\API\\API.csproj",
         "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-        "outputPath": "E:\\MyRestAPI\\MyRestAPI\\API\\obj\\",
+        "outputPath": "E:\\MyRestAPI\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\VSC components\\NuGetPackages"
@@ -34,8 +34,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj": {
-                "projectPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj"
+              "E:\\MyRestAPI\\Common\\Common.csproj": {
+                "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj"
               }
             }
           }
@@ -499,14 +499,14 @@
         }
       }
     },
-    "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj": {
+    "E:\\MyRestAPI\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj",
+        "projectUniqueName": "E:\\MyRestAPI\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj",
+        "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-        "outputPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\obj\\",
+        "outputPath": "E:\\MyRestAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\VSC components\\NuGetPackages"
