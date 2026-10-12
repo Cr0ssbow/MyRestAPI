@@ -1,10 +1,19 @@
-namespace APP.Common;
+using MyAPP.Common.DB.Entity;
+
+namespace MyAPP.Common.DB.IdbUnits;
 
 public interface IManager
 {
-  int Manager_id { get; set; }
-  string Full_Manager_Name { get; set; }
-  string Post { get; set; }
-  string Phone_number { get; set; }
-  string Email { get; set; }
+    // Базовые CRUD-операции
+    List<Manager> Get();
+    Manager? Get(int id);
+    void Post(Manager item);
+    void Put(int id, Manager item);
+    void Delete(int id);
+
+    // Поиск сотрудника по корпоративной электронной почте
+    Manager? GetByEmail(string email);
+
+    // Выборка сотрудников по занимаемой должности
+    List<Manager> GetByPost(string post);
 }

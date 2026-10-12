@@ -1,12 +1,12 @@
 using MyAPP.Common.DB.Entity;
 
-namespace MyAPP.Common.DB;
+namespace MyAPP.Common.DB.IdbUnits;
 
 public interface IDBUnits
 {
-    public List<Units> Get();
-    public Units? Get(int id);
-    public void Post (Units item);
-    public void Put(int id, Units item);
-    public void Delete(int id);
+    List<Units> Get();
+    Units? Get(int id);
+    void Post(Units item);
+    void Put(int id, Units item);
+    void Delete(int id);
 }

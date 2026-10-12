@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj": {}
+    "E:\\MyRestAPI\\Common\\Common.csproj": {}
   },
   "projects": {
-    "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj": {
+    "E:\\MyRestAPI\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj",
+        "projectUniqueName": "E:\\MyRestAPI\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-        "outputPath": "E:\\MyRestAPI\\MyRestAPI\\Common\\obj\\",
+        "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj",
+        "packagesPath": "e:\\MyRestAPI\\Common\\obj\\.nuget\\packages\\",
+        "outputPath": "E:\\MyRestAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\VSC components\\NuGetPackages"

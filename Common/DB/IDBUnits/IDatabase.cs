@@ -1,6 +1,17 @@
-﻿namespace APP.Common;
+using MyAPP.Common.DB.IdbUnits;
+
+namespace MyAPP.Common;
 
 public interface IDataBase
 {
+    IClient Clients { get; }
+    IManager Managers { get; }
+    IInsurance_contract Contracts { get; }
+    IObject Objects { get; }
+    IType_of_insurance InsuranceTypes { get; }
+    IType_of_object ObjectTypes { get; }
+    IDBUnits Units { get; }
 
+    // Проверка доступности подключения к базе данных MariaDB
+    bool TestConnection();
 }
