@@ -5,7 +5,6 @@ namespace MyAPP.Common.DB.IdbUnits;
 
 public interface IObject
 {
-    // Базовые CRUD-операции
     List<Object> Get();
     Object? Get(int id);
     void Post(Object item);

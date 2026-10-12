@@ -4,7 +4,6 @@ namespace MyAPP.Common.DB.IdbUnits;
 
 public interface IManager
 {
-    // Базовые CRUD-операции
     List<Manager> Get();
     Manager? Get(int id);
     void Post(Manager item);
