@@ -1,6 +1,4 @@
-using MyAPP.Common.DB.IdbUnits;
-
-namespace MyAPP.Common;
+namespace MyRestAPI.Common.DB.IDBUnits;
 
 public interface IDataBase
 {

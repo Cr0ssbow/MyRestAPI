@@ -10,10 +10,14 @@ D:\API\Common\obj\Debug\net10.0\refint\Common.dll
 D:\API\Common\obj\Debug\net10.0\Common.pdb
 D:\API\Common\obj\Debug\net10.0\ref\Common.dll
 E:\MyRestAPI\Common\obj\Debug\net10.0\Common.GeneratedMSBuildEditorConfig.editorconfig
-E:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfoInputs.cache
-E:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfo.cs
 E:\MyRestAPI\Common\obj\Debug\net10.0\Common.csproj.CoreCompileInputs.cache
 E:\MyRestAPI\Common\obj\Debug\net10.0\Common.sourcelink.json
+E:\MyRestAPI\Common\bin\Debug\net10.0\Common.deps.json
+E:\MyRestAPI\Common\bin\Debug\net10.0\Common.dll
+E:\MyRestAPI\Common\bin\Debug\net10.0\Common.pdb
 E:\MyRestAPI\Common\obj\Debug\net10.0\Common.dll
 E:\MyRestAPI\Common\obj\Debug\net10.0\refint\Common.dll
 E:\MyRestAPI\Common\obj\Debug\net10.0\Common.pdb
+E:\MyRestAPI\Common\obj\Debug\net10.0\ref\Common.dll
+E:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfoInputs.cache
+E:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfo.cs

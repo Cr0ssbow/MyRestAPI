@@ -27,7 +27,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jenaj\\.nuget\\packages\\": {},
+    "E:\\MyRestAPI\\.nuget\\packages\\": {},
     "E:\\VSC components\\NuGetPackages": {}
   },
   "project": {
@@ -36,7 +36,7 @@
       "projectUniqueName": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
       "projectName": "MariaDB",
       "projectPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
-      "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
+      "packagesPath": "E:\\MyRestAPI\\.nuget\\packages\\",
       "outputPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [

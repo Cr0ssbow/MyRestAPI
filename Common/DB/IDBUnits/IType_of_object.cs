@@ -1,6 +1,6 @@
-using MyAPP.Common.DB.Entity;
+using MyRestAPI.Common.DB.Entity;
 
-namespace MyAPP.Common.DB.IdbUnits;
+namespace MyRestAPI.Common.DB.IDBUnits;
 
 public interface IType_of_object
 {

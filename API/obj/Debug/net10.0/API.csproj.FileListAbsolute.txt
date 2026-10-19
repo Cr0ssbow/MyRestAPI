@@ -33,3 +33,6 @@ D:\API\API\obj\Debug\net10.0\refint\API.dll
 D:\API\API\obj\Debug\net10.0\API.pdb
 D:\API\API\obj\Debug\net10.0\API.genruntimeconfig.cache
 D:\API\API\obj\Debug\net10.0\ref\API.dll
+E:\MyRestAPI\API\obj\Debug\net10.0\API.dll
+E:\MyRestAPI\API\obj\Debug\net10.0\refint\API.dll
+E:\MyRestAPI\API\obj\Debug\net10.0\API.pdb

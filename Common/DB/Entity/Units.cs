@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace MyAPP.Common.DB.Entity;
+namespace MyRestAPI.Common.DB.Entity;
 
 public class Units
 {

@@ -10,7 +10,7 @@
         "projectUniqueName": "E:\\MyRestAPI\\Common\\Common.csproj",
         "projectName": "Common",
         "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
+        "packagesPath": "E:\\MyRestAPI\\.nuget\\packages\\",
         "outputPath": "E:\\MyRestAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -352,7 +352,7 @@
         "projectUniqueName": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
         "projectName": "MariaDB",
         "projectPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
-        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
+        "packagesPath": "E:\\MyRestAPI\\.nuget\\packages\\",
         "outputPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [

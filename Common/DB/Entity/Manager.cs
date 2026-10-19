@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
-using MyAPP.Common.DB.IdbUnits;
 
-namespace MyAPP.Common.DB.Entity;
+namespace MyRestAPI.Common.DB.Entity;
 
 public class Manager
 {

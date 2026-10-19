@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
-using MyAPP.Common.DB.IdbUnits;
 
-namespace MyAPP.Common.DB.Entity;
+namespace MyRestAPI.Common.DB.Entity;
 
 public class Insurance_contract
 {
@@ -97,7 +96,7 @@ public class Insurance_contract
         get { return start_contract_date; }
         set
         {
-            if (date_of_conclusion = default && value.Date < date_of_conclusion.Date)
+            if (date_of_conclusion != default && value.Date < date_of_conclusion.Date)
                 throw new ArgumentException("Start date is earlier than date of conclusion");
             start_contract_date = value;
         }
@@ -108,7 +107,7 @@ public class Insurance_contract
         get { return end_contract_date; }
         set
         {
-            if (start_contract_date = default && value.Date <= start_contract_date.Date)
+            if (start_contract_date != default && value.Date <= start_contract_date.Date)
                 throw new ArgumentException("End date must be later than start date");
             end_contract_date = value;
         }

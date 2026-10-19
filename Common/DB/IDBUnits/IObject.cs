@@ -1,7 +1,7 @@
-using MyAPP.Common.DB.Entity;
-using Object = MyAPP.Common.DB.Entity.Object;
+using MyRestAPI.Common.DB.Entity;
+using Object = MyRestAPI.Common.DB.Entity.Object;
 
-namespace MyAPP.Common.DB.IdbUnits;
+namespace MyRestAPI.Common.DB.IDBUnits;
 
 public interface IObject
 {
