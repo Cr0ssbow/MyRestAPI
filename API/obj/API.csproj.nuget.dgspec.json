@@ -10,7 +10,7 @@
         "projectUniqueName": "E:\\MyRestAPI\\API\\API.csproj",
         "projectName": "API",
         "projectPath": "E:\\MyRestAPI\\API\\API.csproj",
-        "packagesPath": "E:\\MyRestAPI\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
         "outputPath": "E:\\MyRestAPI\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -505,7 +505,7 @@
         "projectUniqueName": "E:\\MyRestAPI\\Common\\Common.csproj",
         "projectName": "Common",
         "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj",
-        "packagesPath": "E:\\MyRestAPI\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
         "outputPath": "E:\\MyRestAPI\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
