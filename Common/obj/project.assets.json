@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MyRestAPI\\Common\\Common.csproj",
+      "projectUniqueName": "e:\\MyRestAPI\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj",
+      "projectPath": "e:\\MyRestAPI\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-      "outputPath": "E:\\MyRestAPI\\Common\\obj\\",
+      "outputPath": "e:\\MyRestAPI\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\VSC components\\NuGetPackages"

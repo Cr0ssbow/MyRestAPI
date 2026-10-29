@@ -10,6 +10,9 @@ public interface IDataBase
     IType_of_object ObjectTypes { get; }
     IDBUnits Units { get; }
 
-    // Проверка доступности подключения к базе данных MariaDB
+    // Проверка доступности подключения к базе данных
     bool TestConnection();
+
+    // Инициализация структуры таблиц базы данных
+    void Initialize();
 }
