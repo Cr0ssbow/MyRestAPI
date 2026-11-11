@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "858hUBNgzaU=",
+  "dgSpecHash": "04Dtk5S5RdM=",
   "success": true,
-  "projectFilePath": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
+  "projectFilePath": "e:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jenaj\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\jenaj\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",

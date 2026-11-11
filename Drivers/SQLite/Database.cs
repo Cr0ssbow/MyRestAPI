@@ -5,6 +5,16 @@ namespace MyRestAPI.Drivers.SQLite;
 
 public class Database : IDataBase
 {
+    private static readonly Dictionary<TableId, Action<SqliteConnection>> creators = new()
+    {
+        [TableId.Type_of_object] = Type_of_object_Table.EnsureTableCreated,
+        [TableId.Type_of_insurance] = Type_of_insurance_Table.EnsureTableCreated,
+        [TableId.Manager] = Manager_Table.EnsureTableCreated,
+        [TableId.Client] = Client_Table.EnsureTableCreated,
+        [TableId.Object] = Object_Table.EnsureTableCreated,
+        [TableId.Insurance_contract] = Insurance_contract_Table.EnsureTableCreated
+    };
+
     private readonly string _connectionString;
 
     public IClient Clients { get; }
@@ -43,6 +53,14 @@ public class Database : IDataBase
 
     public void Initialize()
     {
+        foreach (var id in TableOrder.Creation)
+        {
+            if (!creators.TryGetValue(id, out var creator) || creator is null)
+            {
+                throw new InvalidOperationException($"Не зарегистрирован создатель для таблицы {id}");
+            }
+        }
+
         using var connection = new SqliteConnection(_connectionString);
         connection.Open();
 
@@ -51,12 +69,21 @@ public class Database : IDataBase
         pragma.CommandText = "PRAGMA foreign_keys = ON;";
         pragma.ExecuteNonQuery();
 
-        // Инициализация таблиц через их отдельные классы (в порядке зависимостей)
-        Type_of_object_Table.EnsureTableCreated(connection);
-        Type_of_insurance_Table.EnsureTableCreated(connection);
-        Manager_Table.EnsureTableCreated(connection);
-        Client_Table.EnsureTableCreated(connection);
-        Object_Table.EnsureTableCreated(connection);
-        Insurance_contract_Table.EnsureTableCreated(connection);
+        using var transaction = connection.BeginTransaction();
+
+        foreach (var id in TableOrder.Creation)
+        {
+            try
+            {
+                creators[id](connection);
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw new InvalidOperationException($"Не удалось создать таблицу {id}", ex);
+            }
+        }
+
+        transaction.Commit();
     }
 }

@@ -222,11 +222,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
+      "projectUniqueName": "e:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
       "projectName": "MariaDB",
-      "projectPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
+      "projectPath": "e:\\MyRestAPI\\Drivers\\MariaDB\\MariaDB.csproj",
       "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-      "outputPath": "E:\\MyRestAPI\\Drivers\\MariaDB\\obj\\",
+      "outputPath": "e:\\MyRestAPI\\Drivers\\MariaDB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\VSC components\\NuGetPackages"
@@ -249,8 +249,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "E:\\MyRestAPI\\Common\\Common.csproj": {
-              "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj"
+            "e:\\MyRestAPI\\Common\\Common.csproj": {
+              "projectPath": "e:\\MyRestAPI\\Common\\Common.csproj"
             }
           }
         }
