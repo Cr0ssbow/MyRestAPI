@@ -1,3 +1,4 @@
+using System.Data.Common;
 using Microsoft.Data.Sqlite;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
@@ -5,29 +6,50 @@ using Object = MyRestAPI.Common.DB.Entity.Object;
 
 namespace MyRestAPI.Drivers.SQLite;
 
-public class Object_Table : IObject
+public class Object_Table : IObject, ITableInitializer
 {
+    private const string CreateSql = """
+        CREATE TABLE IF NOT EXISTS Object (
+            Object_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            Type_of_object_id INTEGER NOT NULL,
+            Title TEXT NOT NULL,
+            Identifier TEXT NOT NULL,
+            Description TEXT NOT NULL,
+            Estimated_value INTEGER NOT NULL,
+            FOREIGN KEY (Type_of_object_id) REFERENCES Type_of_object(Type_of_object_id) ON DELETE RESTRICT
+        );
+        """;
+
     private readonly string _connectionString;
+
+    public string TableName => "Object";
 
     public Object_Table(string connectionString)
     {
         _connectionString = connectionString;
     }
 
-    public static void EnsureTableCreated(SqliteConnection connection)
+    public bool Exists(DbConnection connection)
     {
         using var command = connection.CreateCommand();
-        command.CommandText = """
-            CREATE TABLE IF NOT EXISTS Object (
-                Object_id INTEGER PRIMARY KEY AUTOINCREMENT,
-                Type_of_object_id INTEGER NOT NULL,
-                Title TEXT NOT NULL,
-                Identifier TEXT NOT NULL,
-                Description TEXT NOT NULL,
-                Estimated_value INTEGER NOT NULL,
-                FOREIGN KEY (Type_of_object_id) REFERENCES Type_of_object(Type_of_object_id) ON DELETE RESTRICT
-            );
-        """;
+        command.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = @name;";
+        var parameter = command.CreateParameter();
+        parameter.ParameterName = "@name";
+        parameter.Value = TableName;
+        command.Parameters.Add(parameter);
+
+        return Convert.ToInt32(command.ExecuteScalar()) > 0;
+    }
+
+    public void EnsureCreated(DbConnection connection)
+    {
+        if (Exists(connection))
+        {
+            return;
+        }
+
+        using var command = connection.CreateCommand();
+        command.CommandText = CreateSql;
         command.ExecuteNonQuery();
     }
 

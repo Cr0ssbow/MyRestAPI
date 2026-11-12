@@ -5,16 +5,6 @@ namespace MyRestAPI.Drivers.SQLite;
 
 public class Database : IDataBase
 {
-    private static readonly Dictionary<TableId, Action<SqliteConnection>> creators = new()
-    {
-        [TableId.Type_of_object] = Type_of_object_Table.EnsureTableCreated,
-        [TableId.Type_of_insurance] = Type_of_insurance_Table.EnsureTableCreated,
-        [TableId.Manager] = Manager_Table.EnsureTableCreated,
-        [TableId.Client] = Client_Table.EnsureTableCreated,
-        [TableId.Object] = Object_Table.EnsureTableCreated,
-        [TableId.Insurance_contract] = Insurance_contract_Table.EnsureTableCreated
-    };
-
     private readonly string _connectionString;
 
     public IClient Clients { get; }
@@ -53,34 +43,36 @@ public class Database : IDataBase
 
     public void Initialize()
     {
-        foreach (var id in TableOrder.Creation)
-        {
-            if (!creators.TryGetValue(id, out var creator) || creator is null)
-            {
-                throw new InvalidOperationException($"Не зарегистрирован создатель для таблицы {id}");
-            }
-        }
+        ITableInitializer[] tables =
+        [
+            new Type_of_object_Table(_connectionString),
+            new Type_of_insurance_Table(_connectionString),
+            new Manager_Table(_connectionString),
+            new Client_Table(_connectionString),
+            new Object_Table(_connectionString),
+            new Insurance_contract_Table(_connectionString)
+        ];
 
         using var connection = new SqliteConnection(_connectionString);
         connection.Open();
 
-        // Включение поддержки внешних ключей в SQLite
+        // Включение поддержки внешних ключей в SQLite до начала транзакции
         using var pragma = connection.CreateCommand();
         pragma.CommandText = "PRAGMA foreign_keys = ON;";
         pragma.ExecuteNonQuery();
 
         using var transaction = connection.BeginTransaction();
 
-        foreach (var id in TableOrder.Creation)
+        foreach (var table in tables)
         {
             try
             {
-                creators[id](connection);
+                table.EnsureCreated(connection);
             }
             catch (Exception ex)
             {
                 transaction.Rollback();
-                throw new InvalidOperationException($"Не удалось создать таблицу {id}", ex);
+                throw new InvalidOperationException($"Не удалось создать таблицу {table.TableName}", ex);
             }
         }
 
