@@ -23,9 +23,13 @@ public class Type_of_object_Table : IType_of_object, ITableInitializer
         _connectionString = connectionString;
     }
 
-    public bool Exists(DbConnection connection)
+    public bool Exists(DbConnection connection, DbTransaction? transaction = null)
     {
         using var command = connection.CreateCommand();
+        if (transaction != null)
+        {
+            command.Transaction = transaction;
+        }
         command.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = @name;";
         var parameter = command.CreateParameter();
         parameter.ParameterName = "@name";
@@ -35,14 +39,18 @@ public class Type_of_object_Table : IType_of_object, ITableInitializer
         return Convert.ToInt32(command.ExecuteScalar()) > 0;
     }
 
-    public void EnsureCreated(DbConnection connection)
+    public void EnsureCreated(DbConnection connection, DbTransaction? transaction = null)
     {
-        if (Exists(connection))
+        if (Exists(connection, transaction))
         {
             return;
         }
 
         using var command = connection.CreateCommand();
+        if (transaction != null)
+        {
+            command.Transaction = transaction;
+        }
         command.CommandText = CreateSql;
         command.ExecuteNonQuery();
     }

@@ -26,9 +26,13 @@ public class Manager_Table : IManager, ITableInitializer
         _connectionString = connectionString;
     }
 
-    public bool Exists(DbConnection connection)
+    public bool Exists(DbConnection connection, DbTransaction? transaction = null)
     {
         using var command = connection.CreateCommand();
+        if (transaction != null)
+        {
+            command.Transaction = transaction;
+        }
         command.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = @name;";
         var parameter = command.CreateParameter();
         parameter.ParameterName = "@name";
@@ -38,14 +42,18 @@ public class Manager_Table : IManager, ITableInitializer
         return Convert.ToInt32(command.ExecuteScalar()) > 0;
     }
 
-    public void EnsureCreated(DbConnection connection)
+    public void EnsureCreated(DbConnection connection, DbTransaction? transaction = null)
     {
-        if (Exists(connection))
+        if (Exists(connection, transaction))
         {
             return;
         }
 
         using var command = connection.CreateCommand();
+        if (transaction != null)
+        {
+            command.Transaction = transaction;
+        }
         command.CommandText = CreateSql;
         command.ExecuteNonQuery();
     }

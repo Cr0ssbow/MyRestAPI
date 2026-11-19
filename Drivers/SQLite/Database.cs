@@ -67,7 +67,7 @@ public class Database : IDataBase
         {
             try
             {
-                table.EnsureCreated(connection);
+                table.EnsureCreated(connection, transaction);
             }
             catch (Exception ex)
             {
