@@ -21,3 +21,15 @@ E:\MyRestAPI\Common\obj\Debug\net10.0\Common.pdb
 E:\MyRestAPI\Common\obj\Debug\net10.0\ref\Common.dll
 E:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfoInputs.cache
 E:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfo.cs
+D:\MyRestAPI\Common\bin\Debug\net10.0\Common.deps.json
+D:\MyRestAPI\Common\bin\Debug\net10.0\Common.dll
+D:\MyRestAPI\Common\bin\Debug\net10.0\Common.pdb
+D:\MyRestAPI\Common\obj\Debug\net10.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfoInputs.cache
+D:\MyRestAPI\Common\obj\Debug\net10.0\Common.AssemblyInfo.cs
+D:\MyRestAPI\Common\obj\Debug\net10.0\Common.csproj.CoreCompileInputs.cache
+D:\MyRestAPI\Common\obj\Debug\net10.0\Common.sourcelink.json
+D:\MyRestAPI\Common\obj\Debug\net10.0\Common.dll
+D:\MyRestAPI\Common\obj\Debug\net10.0\refint\Common.dll
+D:\MyRestAPI\Common\obj\Debug\net10.0\Common.pdb
+D:\MyRestAPI\Common\obj\Debug\net10.0\ref\Common.dll

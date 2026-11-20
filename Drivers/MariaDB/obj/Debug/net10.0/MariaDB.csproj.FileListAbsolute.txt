@@ -1,0 +1,16 @@
+D:\MyRestAPI\Drivers\MariaDB\bin\Debug\net10.0\MariaDB.deps.json
+D:\MyRestAPI\Drivers\MariaDB\bin\Debug\net10.0\MariaDB.dll
+D:\MyRestAPI\Drivers\MariaDB\bin\Debug\net10.0\MariaDB.pdb
+D:\MyRestAPI\Drivers\MariaDB\bin\Debug\net10.0\Common.dll
+D:\MyRestAPI\Drivers\MariaDB\bin\Debug\net10.0\Common.pdb
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.csproj.AssemblyReference.cache
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.AssemblyInfoInputs.cache
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.AssemblyInfo.cs
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.csproj.CoreCompileInputs.cache
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.sourcelink.json
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.csproj.Up2Date
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.dll
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\refint\MariaDB.dll
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\MariaDB.pdb
+D:\MyRestAPI\Drivers\MariaDB\obj\Debug\net10.0\ref\MariaDB.dll

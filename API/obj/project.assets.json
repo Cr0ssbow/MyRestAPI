@@ -384,23 +384,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jenaj\\.nuget\\packages\\": {},
-    "E:\\VSC components\\NuGetPackages": {}
+    "C:\\Users\\Evgeny\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MyRestAPI\\API\\API.csproj",
+      "projectUniqueName": "D:\\MyRestAPI\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "E:\\MyRestAPI\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
-      "outputPath": "E:\\MyRestAPI\\API\\obj\\",
+      "projectPath": "D:\\MyRestAPI\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\Evgeny\\.nuget\\packages\\",
+      "outputPath": "D:\\MyRestAPI\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "E:\\VSC components\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jenaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Evgeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -417,8 +417,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "E:\\MyRestAPI\\Common\\Common.csproj": {
-              "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj"
+            "D:\\MyRestAPI\\Common\\Common.csproj": {
+              "projectPath": "D:\\MyRestAPI\\Common\\Common.csproj"
             }
           }
         }

@@ -1,0 +1,16 @@
+D:\MyRestAPI\Drivers\SQLite\bin\Debug\net10.0\SQLite.deps.json
+D:\MyRestAPI\Drivers\SQLite\bin\Debug\net10.0\SQLite.dll
+D:\MyRestAPI\Drivers\SQLite\bin\Debug\net10.0\SQLite.pdb
+D:\MyRestAPI\Drivers\SQLite\bin\Debug\net10.0\Common.dll
+D:\MyRestAPI\Drivers\SQLite\bin\Debug\net10.0\Common.pdb
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.csproj.AssemblyReference.cache
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.AssemblyInfoInputs.cache
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.AssemblyInfo.cs
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.csproj.CoreCompileInputs.cache
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.sourcelink.json
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.csproj.Up2Date
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.dll
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\refint\SQLite.dll
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\SQLite.pdb
+D:\MyRestAPI\Drivers\SQLite\obj\Debug\net10.0\ref\SQLite.dll

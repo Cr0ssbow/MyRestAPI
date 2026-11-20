@@ -43,20 +43,17 @@ public class Database : IDataBase
 
     public void Initialize()
     {
-        ITableInitializer[] tables =
-        [
-            new Type_of_object_Table(_connectionString),
-            new Type_of_insurance_Table(_connectionString),
-            new Manager_Table(_connectionString),
-            new Client_Table(_connectionString),
-            new Object_Table(_connectionString),
-            new Insurance_contract_Table(_connectionString)
-        ];
+        ITableInitializer[] tables = new ITableInitializer[6];
+        tables[0] = new Type_of_object_Table(_connectionString);
+        tables[1] = new Type_of_insurance_Table(_connectionString);
+        tables[2] = new Manager_Table(_connectionString);
+        tables[3] = new Client_Table(_connectionString);
+        tables[4] = new Object_Table(_connectionString);
+        tables[5] = new Insurance_contract_Table(_connectionString);
 
         using var connection = new SqliteConnection(_connectionString);
         connection.Open();
 
-        // Включение поддержки внешних ключей в SQLite до начала транзакции
         using var pragma = connection.CreateCommand();
         pragma.CommandText = "PRAGMA foreign_keys = ON;";
         pragma.ExecuteNonQuery();
