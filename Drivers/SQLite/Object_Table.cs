@@ -1,5 +1,6 @@
 using System.Data.Common;
 using Microsoft.Data.Sqlite;
+using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 using Object = MyRestAPI.Common.DB.Entity.Object;
@@ -20,13 +21,13 @@ public class Object_Table : IObject, ITableInitializer
         );
         """;
 
-    private readonly string _connectionString;
+    private readonly DbConnectionWrapper<SqliteConnection> _dbWrapper;
 
     public string TableName => "Object";
 
-    public Object_Table(string connectionString)
+    public Object_Table(DbConnectionWrapper<SqliteConnection> dbWrapper)
     {
-        _connectionString = connectionString;
+        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
     }
 
     public bool Exists(DbConnection connection, DbTransaction? transaction = null)

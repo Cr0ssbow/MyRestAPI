@@ -1,5 +1,6 @@
 using System.Data.Common;
 using Microsoft.Data.Sqlite;
+using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 
@@ -20,13 +21,13 @@ public class Client_Table : IClient, ITableInitializer
         );
         """;
 
-    private readonly string _connectionString;
+    private readonly DbConnectionWrapper<SqliteConnection> _dbWrapper;
 
     public string TableName => "Client";
 
-    public Client_Table(string connectionString)
+    public Client_Table(DbConnectionWrapper<SqliteConnection> dbWrapper)
     {
-        _connectionString = connectionString;
+        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
     }
 
     public bool Exists(DbConnection connection, DbTransaction? transaction = null)

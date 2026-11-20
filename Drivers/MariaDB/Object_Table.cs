@@ -1,5 +1,6 @@
 using System.Data.Common;
 using MySqlConnector;
+using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 using Object = MyRestAPI.Common.DB.Entity.Object;
@@ -21,13 +22,13 @@ public class Object_Table : IObject, ITableInitializer
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         """;
 
-    private readonly string _connectionString;
+    private readonly DbConnectionWrapper<MySqlConnection> _dbWrapper;
 
     public string TableName => "Object";
 
-    public Object_Table(string connectionString)
+    public Object_Table(DbConnectionWrapper<MySqlConnection> dbWrapper)
     {
-        _connectionString = connectionString;
+        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
     }
 
     public bool Exists(DbConnection connection)

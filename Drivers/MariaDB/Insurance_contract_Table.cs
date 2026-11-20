@@ -1,5 +1,6 @@
 using System.Data.Common;
 using MySqlConnector;
+using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 
@@ -31,13 +32,13 @@ public class Insurance_contract_Table : IInsurance_contract, ITableInitializer
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         """;
 
-    private readonly string _connectionString;
+    private readonly DbConnectionWrapper<MySqlConnection> _dbWrapper;
 
     public string TableName => "Insurance_contract";
 
-    public Insurance_contract_Table(string connectionString)
+    public Insurance_contract_Table(DbConnectionWrapper<MySqlConnection> dbWrapper)
     {
-        _connectionString = connectionString;
+        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
     }
 
     public bool Exists(DbConnection connection)

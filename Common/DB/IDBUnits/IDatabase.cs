@@ -1,6 +1,6 @@
 namespace MyRestAPI.Common.DB.IDBUnits;
 
-public interface IDataBase
+public interface IDataBase : IDisposable
 {
     IClient Clients { get; }
     IManager Managers { get; }

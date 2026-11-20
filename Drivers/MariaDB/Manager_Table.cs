@@ -1,5 +1,6 @@
 using System.Data.Common;
 using MySqlConnector;
+using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 
@@ -17,13 +18,13 @@ public class Manager_Table : IManager, ITableInitializer
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         """;
 
-    private readonly string _connectionString;
+    private readonly DbConnectionWrapper<MySqlConnection> _dbWrapper;
 
     public string TableName => "Manager";
 
-    public Manager_Table(string connectionString)
+    public Manager_Table(DbConnectionWrapper<MySqlConnection> dbWrapper)
     {
-        _connectionString = connectionString;
+        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
     }
 
     public bool Exists(DbConnection connection)

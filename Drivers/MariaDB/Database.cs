@@ -1,4 +1,6 @@
+using System.Data;
 using MySqlConnector;
+using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.IDBUnits;
 
 namespace MyRestAPI.Drivers.MariaDB;
@@ -6,6 +8,7 @@ namespace MyRestAPI.Drivers.MariaDB;
 public class Database : IDataBase
 {
     private readonly string _connectionString;
+    private readonly DbConnectionWrapper<MySqlConnection> _dbWrapper;
 
     public IClient Clients { get; }
     public IManager Managers { get; }
@@ -18,22 +21,21 @@ public class Database : IDataBase
     public Database(string connectionString = "Server=localhost;Database=insurance_company;User ID=root;Password=;")
     {
         _connectionString = connectionString;
+        _dbWrapper = new DbConnectionWrapper<MySqlConnection>(connectionString);
 
-        Clients = new Client_Table(connectionString);
-        Managers = new Manager_Table(connectionString);
-        Contracts = new Insurance_contract_Table(connectionString);
-        Objects = new Object_Table(connectionString);
-        InsuranceTypes = new Type_of_insurance_Table(connectionString);
-        ObjectTypes = new Type_of_object_Table(connectionString);
+        Clients = new Client_Table(_dbWrapper);
+        Managers = new Manager_Table(_dbWrapper);
+        Contracts = new Insurance_contract_Table(_dbWrapper);
+        Objects = new Object_Table(_dbWrapper);
+        InsuranceTypes = new Type_of_insurance_Table(_dbWrapper);
+        ObjectTypes = new Type_of_object_Table(_dbWrapper);
     }
 
     public bool TestConnection()
     {
         try
         {
-            using var connection = new MySqlConnection(_connectionString);
-            connection.Open();
-            return true;
+            return _dbWrapper.Execute(conn => conn.State == ConnectionState.Open);
         }
         catch
         {
@@ -45,27 +47,32 @@ public class Database : IDataBase
     {
         ITableInitializer[] tables =
         [
-            new Type_of_object_Table(_connectionString),
-            new Type_of_insurance_Table(_connectionString),
-            new Manager_Table(_connectionString),
-            new Client_Table(_connectionString),
-            new Object_Table(_connectionString),
-            new Insurance_contract_Table(_connectionString)
+            (ITableInitializer)ObjectTypes,
+            (ITableInitializer)InsuranceTypes,
+            (ITableInitializer)Managers,
+            (ITableInitializer)Clients,
+            (ITableInitializer)Objects,
+            (ITableInitializer)Contracts
         ];
 
-        using var connection = new MySqlConnection(_connectionString);
-        connection.Open();
-
-        foreach (var table in tables)
+        _dbWrapper.Execute(connection =>
         {
-            try
+            foreach (var table in tables)
             {
-                table.EnsureCreated(connection);
+                try
+                {
+                    table.EnsureCreated(connection);
+                }
+                catch (Exception ex)
+                {
+                    throw new InvalidOperationException($"Не удалось создать таблицу {table.TableName}", ex);
+                }
             }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException($"Не удалось создать таблицу {table.TableName}", ex);
-            }
-        }
+        });
+    }
+
+    public void Dispose()
+    {
+        _dbWrapper.Dispose();
     }
 }

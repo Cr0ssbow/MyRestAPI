@@ -312,23 +312,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Evgeny\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jenaj\\.nuget\\packages\\": {},
+    "E:\\VSC components\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj",
+      "projectUniqueName": "e:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj",
       "projectName": "SQLite",
-      "projectPath": "D:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj",
-      "packagesPath": "C:\\Users\\Evgeny\\.nuget\\packages\\",
-      "outputPath": "D:\\MyRestAPI\\Drivers\\SQLite\\obj\\",
+      "projectPath": "e:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj",
+      "packagesPath": "C:\\Users\\jenaj\\.nuget\\packages\\",
+      "outputPath": "e:\\MyRestAPI\\Drivers\\SQLite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "E:\\VSC components\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Evgeny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jenaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -345,8 +345,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\MyRestAPI\\Common\\Common.csproj": {
-              "projectPath": "D:\\MyRestAPI\\Common\\Common.csproj"
+            "e:\\MyRestAPI\\Common\\Common.csproj": {
+              "projectPath": "e:\\MyRestAPI\\Common\\Common.csproj"
             }
           }
         }

@@ -1,5 +1,6 @@
 using System.Data.Common;
 using Microsoft.Data.Sqlite;
+using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 
@@ -17,13 +18,13 @@ public class Type_of_insurance_Table : IType_of_insurance, ITableInitializer
         );
         """;
 
-    private readonly string _connectionString;
+    private readonly DbConnectionWrapper<SqliteConnection> _dbWrapper;
 
     public string TableName => "Type_of_insurance";
 
-    public Type_of_insurance_Table(string connectionString)
+    public Type_of_insurance_Table(DbConnectionWrapper<SqliteConnection> dbWrapper)
     {
-        _connectionString = connectionString;
+        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
     }
 
     public bool Exists(DbConnection connection, DbTransaction? transaction = null)
