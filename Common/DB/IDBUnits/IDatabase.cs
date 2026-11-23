@@ -1,6 +1,6 @@
 namespace MyRestAPI.Common.DB.IDBUnits;
 
-public interface IDataBase : IDisposable
+public interface IDatabase : IDisposable
 {
     IClient Clients { get; }
     IManager Managers { get; }
@@ -15,4 +15,7 @@ public interface IDataBase : IDisposable
 
     // Инициализация структуры таблиц базы данных
     void Initialize();
+
+    // Остановка очереди записи и освобождение ресурсов
+    void Release();
 }

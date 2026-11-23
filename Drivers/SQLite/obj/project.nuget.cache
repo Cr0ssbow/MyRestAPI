@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ytux1pfAZO0=",
+  "dgSpecHash": "wmFd3JHsfds=",
   "success": true,
-  "projectFilePath": "e:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj",
+  "projectFilePath": "E:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jenaj\\.nuget\\packages\\microsoft.data.sqlite\\10.0.14\\microsoft.data.sqlite.10.0.14.nupkg.sha512",
     "C:\\Users\\jenaj\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.14\\microsoft.data.sqlite.core.10.0.14.nupkg.sha512",

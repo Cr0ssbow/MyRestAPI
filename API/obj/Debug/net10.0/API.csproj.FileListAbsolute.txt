@@ -157,3 +157,5 @@ D:\MyRestAPI\API\obj\Debug\net10.0\refint\API.dll
 D:\MyRestAPI\API\obj\Debug\net10.0\API.pdb
 D:\MyRestAPI\API\obj\Debug\net10.0\API.genruntimeconfig.cache
 D:\MyRestAPI\API\obj\Debug\net10.0\ref\API.dll
+E:\MyRestAPI\API\bin\Debug\net10.0\SQLite.dll
+E:\MyRestAPI\API\bin\Debug\net10.0\SQLite.pdb

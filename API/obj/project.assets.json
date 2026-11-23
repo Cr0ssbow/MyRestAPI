@@ -212,6 +212,20 @@
         "runtime": {
           "bin/placeholder/Common.dll": {}
         }
+      },
+      "SQLite/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Common": "1.0.0",
+          "Microsoft.Data.Sqlite": "10.0.14"
+        },
+        "compile": {
+          "bin/placeholder/SQLite.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SQLite.dll": {}
+        }
       }
     }
   },
@@ -374,13 +388,19 @@
       "type": "project",
       "path": "../Common/Common.csproj",
       "msbuildProject": "../Common/Common.csproj"
+    },
+    "SQLite/1.0.0": {
+      "type": "project",
+      "path": "../Drivers/SQLite/SQLite.csproj",
+      "msbuildProject": "../Drivers/SQLite/SQLite.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "Common >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.12",
-      "Microsoft.Data.Sqlite >= 10.0.14"
+      "Microsoft.Data.Sqlite >= 10.0.14",
+      "SQLite >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -419,6 +439,9 @@
           "projectReferences": {
             "E:\\MyRestAPI\\Common\\Common.csproj": {
               "projectPath": "E:\\MyRestAPI\\Common\\Common.csproj"
+            },
+            "E:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj": {
+              "projectPath": "E:\\MyRestAPI\\Drivers\\SQLite\\SQLite.csproj"
             }
           }
         }

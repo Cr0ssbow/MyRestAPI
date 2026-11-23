@@ -1,10 +1,23 @@
+using MyRestAPI.Common.DB.IDBUnits;
+using MyRestAPI.Drivers.SQLite;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+// Регистрация Database как Singleton с обёрткой и очередью
+var database = new Database();
+builder.Services.AddSingleton<IDatabase>(database);
+
 var app = builder.Build();
+
+// Явный вызов Release при остановке приложения
+app.Lifetime.ApplicationStopping.Register(() =>
+{
+    database.Release();
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -32,6 +45,9 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+// Инициализация структуры базы данных до приёма HTTP-запросов
+database.Initialize();
 
 app.Run();
 

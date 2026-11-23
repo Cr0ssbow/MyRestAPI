@@ -5,7 +5,7 @@ using MyRestAPI.Common.DB.IDBUnits;
 
 namespace MyRestAPI.Drivers.SQLite;
 
-public class Database : IDataBase
+public class Database : IDatabase
 {
     private readonly string _connectionString;
     private readonly DbConnectionWrapper<SqliteConnection> _dbWrapper;
@@ -26,7 +26,7 @@ public class Database : IDataBase
             afterOpen: conn =>
             {
                 using var pragma = conn.CreateCommand();
-                pragma.CommandText = "PRAGMA foreign_keys = ON;";
+                pragma.CommandText = "PRAGMA journal_mode = WAL; PRAGMA foreign_keys = ON;";
                 pragma.ExecuteNonQuery();
             });
 
@@ -42,7 +42,7 @@ public class Database : IDataBase
     {
         try
         {
-            return _dbWrapper.Execute(conn => conn.State == ConnectionState.Open);
+            return _dbWrapper.ExecuteRead(conn => conn.State == ConnectionState.Open);
         }
         catch
         {
@@ -52,17 +52,15 @@ public class Database : IDataBase
 
     public void Initialize()
     {
-        ITableInitializer[] tables =
-        [
-            (ITableInitializer)ObjectTypes,
-            (ITableInitializer)InsuranceTypes,
-            (ITableInitializer)Managers,
-            (ITableInitializer)Clients,
-            (ITableInitializer)Objects,
-            (ITableInitializer)Contracts
-        ];
+        ITableInitializer[] tables = new ITableInitializer[6];
+        tables[0] = (ITableInitializer)ObjectTypes;
+        tables[1] = (ITableInitializer)InsuranceTypes;
+        tables[2] = (ITableInitializer)Managers;
+        tables[3] = (ITableInitializer)Clients;
+        tables[4] = (ITableInitializer)Objects;
+        tables[5] = (ITableInitializer)Contracts;
 
-        _dbWrapper.ExecuteTransaction((connection, transaction) =>
+        _dbWrapper.ExecuteWriteTransaction((connection, transaction) =>
         {
             foreach (var table in tables)
             {
@@ -78,8 +76,13 @@ public class Database : IDataBase
         });
     }
 
+    public void Release()
+    {
+        _dbWrapper.Release();
+    }
+
     public void Dispose()
     {
-        _dbWrapper.Dispose();
+        Release();
     }
 }
