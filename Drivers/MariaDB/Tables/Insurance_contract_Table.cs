@@ -1,14 +1,11 @@
-using System.Data.Common;
-using MySqlConnector;
-using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 
-namespace MyRestAPI.Drivers.MariaDB;
+namespace MyRestAPI.Drivers.MariaDB.Tables;
 
-public class Insurance_contract_Table : IInsurance_contract, ITableInitializer
+public class Insurance_contract_Table : IInsurance_contract
 {
-    private const string CreateSql = """
+    internal const string CreateSql = """
         CREATE TABLE IF NOT EXISTS Insurance_contract (
             Contract_id INT AUTO_INCREMENT PRIMARY KEY,
             Client_id INT NOT NULL,
@@ -32,37 +29,11 @@ public class Insurance_contract_Table : IInsurance_contract, ITableInitializer
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
         """;
 
-    private readonly DbConnectionWrapper<MySqlConnection> _dbWrapper;
+    private readonly MariaDbExecutor<Insurance_contract> _executor;
 
-    public string TableName => "Insurance_contract";
-
-    public Insurance_contract_Table(DbConnectionWrapper<MySqlConnection> dbWrapper)
+    public Insurance_contract_Table(MariaDbExecutor<Insurance_contract> executor)
     {
-        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
-    }
-
-    public bool Exists(DbConnection connection)
-    {
-        using var command = connection.CreateCommand();
-        command.CommandText = "SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = @name;";
-        var parameter = command.CreateParameter();
-        parameter.ParameterName = "@name";
-        parameter.Value = TableName;
-        command.Parameters.Add(parameter);
-
-        return Convert.ToInt32(command.ExecuteScalar()) > 0;
-    }
-
-    public void EnsureCreated(DbConnection connection)
-    {
-        if (Exists(connection))
-        {
-            return;
-        }
-
-        using var command = connection.CreateCommand();
-        command.CommandText = CreateSql;
-        command.ExecuteNonQuery();
+        _executor = executor ?? throw new ArgumentNullException(nameof(executor));
     }
 
     public List<Insurance_contract> Get() => throw new NotImplementedException();
@@ -77,3 +48,4 @@ public class Insurance_contract_Table : IInsurance_contract, ITableInitializer
     public List<Insurance_contract> GetDealsReport(DateTime fromDate, DateTime toDate, int? managerId = null, string? status = null) => throw new NotImplementedException();
     public List<Insurance_contract> GetExpiringContracts(int days) => throw new NotImplementedException();
 }
+

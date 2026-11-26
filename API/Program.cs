@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-// Регистрация Database как Singleton с обёрткой и очередью
-var database = new Database();
+// Регистрация SqliteDatabase как Singleton (единый Mutex для всех операций SQLite)
+var database = new SqliteDatabase();
 builder.Services.AddSingleton<IDatabase>(database);
 
 var app = builder.Build();

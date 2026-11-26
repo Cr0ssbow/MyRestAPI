@@ -1,14 +1,11 @@
-using System.Data.Common;
-using Microsoft.Data.Sqlite;
-using MyRestAPI.Common.DB;
 using MyRestAPI.Common.DB.Entity;
 using MyRestAPI.Common.DB.IDBUnits;
 
-namespace MyRestAPI.Drivers.SQLite;
+namespace MyRestAPI.Drivers.SQLite.Tables;
 
-public class Insurance_contract_Table : IInsurance_contract, ITableInitializer
+public class Insurance_contract_Table : IInsurance_contract
 {
-    private const string CreateSql = """
+    internal const string CreateSql = """
         CREATE TABLE IF NOT EXISTS Insurance_contract (
             Contract_id INTEGER PRIMARY KEY AUTOINCREMENT,
             Client_id INTEGER NOT NULL,
@@ -28,45 +25,11 @@ public class Insurance_contract_Table : IInsurance_contract, ITableInitializer
         );
         """;
 
-    private readonly DbConnectionWrapper<SqliteConnection> _dbWrapper;
+    private readonly SqliteExecutor<Insurance_contract> _executor;
 
-    public string TableName => "Insurance_contract";
-
-    public Insurance_contract_Table(DbConnectionWrapper<SqliteConnection> dbWrapper)
+    public Insurance_contract_Table(SqliteExecutor<Insurance_contract> executor)
     {
-        _dbWrapper = dbWrapper ?? throw new ArgumentNullException(nameof(dbWrapper));
-    }
-
-    public bool Exists(DbConnection connection, DbTransaction? transaction = null)
-    {
-        using var command = connection.CreateCommand();
-        if (transaction != null)
-        {
-            command.Transaction = transaction;
-        }
-        command.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = @name;";
-        var parameter = command.CreateParameter();
-        parameter.ParameterName = "@name";
-        parameter.Value = TableName;
-        command.Parameters.Add(parameter);
-
-        return Convert.ToInt32(command.ExecuteScalar()) > 0;
-    }
-
-    public void EnsureCreated(DbConnection connection, DbTransaction? transaction = null)
-    {
-        if (Exists(connection, transaction))
-        {
-            return;
-        }
-
-        using var command = connection.CreateCommand();
-        if (transaction != null)
-        {
-            command.Transaction = transaction;
-        }
-        command.CommandText = CreateSql;
-        command.ExecuteNonQuery();
+        _executor = executor ?? throw new ArgumentNullException(nameof(executor));
     }
 
     public List<Insurance_contract> Get() => throw new NotImplementedException();
@@ -81,3 +44,4 @@ public class Insurance_contract_Table : IInsurance_contract, ITableInitializer
     public List<Insurance_contract> GetDealsReport(DateTime fromDate, DateTime toDate, int? managerId = null, string? status = null) => throw new NotImplementedException();
     public List<Insurance_contract> GetExpiringContracts(int days) => throw new NotImplementedException();
 }
+
